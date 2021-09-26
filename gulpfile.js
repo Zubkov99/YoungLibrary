@@ -22,6 +22,8 @@ let path = {
         css: source_folder+"/scss/**/*.scss",
         js: source_folder+"/js/**/*.js",
         img: source_folder+"/img/**/*.{jpg,jpeg,png,gif,svg,ico,webp,pdf}",
+
+
     },
     clean: "./" +project_folder+ "/",
 }

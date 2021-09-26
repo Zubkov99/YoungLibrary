@@ -1,43 +1,17 @@
-$maxWidth: 1440;
-
-@mixin adaptiv-font($pcSize, $mobSize) {
-    $addSize: $pcSize - $mobSize;
-    $maxWidth: $maxWidth - 320;
-    font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
-   }
-
-   @mixin adaptiv-line($pcSize, $mobSize) {
-    $addSize: $pcSize - $mobSize;
-    $maxWidth: $maxWidth - 320;
-    line-height: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
-   }
-
-   @mixin adaptiv-imgWidth($pcSize, $mobSize) {
-    $addSize: $pcSize - $mobSize;
-    $maxWidth: $maxWidth - 320;
-    width: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
-   }
-
-   @mixin adaptiv-imgHeight($pcSize, $mobSize) {
-    $addSize: $pcSize - $mobSize;
-    $maxWidth: $maxWidth - 320;
-    height: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
-   }
-
 header {
     background-image: url('/img/bcImg.webp');
     height: auto;
     min-height: 100vh;
     width: 100vw;
-    padding-bottom: 20px;
+    padding-bottom: 25px;
 
     .header__wrapeer {
         display: flex;
-        padding-top: calc(30px + (200 - 70) * ((100vw - 320px) / (1400 - 320)));
+        padding-top: calc(30px + (200 - 140) * ((100vw - 320px) / (1400 - 320)));
 
         img {
-            @include adaptiv-imgWidth(444, 105);
-            @include adaptiv-imgHeight(524, 131);
+            @include adaptiv-imgWidth(421, 102);
+            @include adaptiv-imgHeight(408, 100);
         }
 
         .header__description {
@@ -46,6 +20,18 @@ header {
             font-style: normal;
             margin-left: 10vw;
             margin-top: 10px;
+
+            .open {
+                color: #00FF00;
+            }
+
+            .close {
+                color: #FF0000;
+            }
+
+            span {
+                font-weight: 900;
+            }
 
             h1 {
                 // line-height: calc(40px + 36 *(100vw / 1408));
@@ -59,7 +45,7 @@ header {
                 @include adaptiv-font(22, 20);
                 @include adaptiv-line(34, 27);
                 margin-top: 55px;
-                width: 30vw;
+                width: 40vw;
             }
 
             a {
@@ -71,7 +57,7 @@ header {
 }
 
 
-@media (max-width: 902px) {
+@media (max-width: 1028px) {
 
     .header {
         min-height: 500px;
@@ -88,8 +74,8 @@ header {
             }
             img {
                 position: relative;
-                right: 230px;
-                opacity: .7;
+                right: 250px;
+                opacity: .9;
             }    
         }
     }
