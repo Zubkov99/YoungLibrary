@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.anima {
+    width: 100%;
+    height: auto;
+    position: absolute;
+
+    .title1 {
+        font-family: "Golos-Text_Regular";
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        left: 50%; 
+        transform: translate(-50%, -50%);
+        white-space: normal;
+        text-align: center;
+        h1 {
+            @include adaptiv-line(90, 40);
+            @include adaptiv-font(80, 30);
+            padding-bottom: calc(10px + (50 - 30) * ((100vw - 320px) / (1440 - 320)));;
+        }
+
+        span {
+            @include adaptiv-line(20, 25);
+            @include adaptiv-font(40, 18);            
+        }
+       
+        border: 5px solid #000;
+    
+    }
+
+    #canvas1 {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+// #title1::before {
+//     content: 'проголосуй за ЛДПР';
+//     position: absolute;
+//     bottom: -40px;
+//     @include adaptiv-line(20, 25);
+//     @include adaptiv-font(40, 18);
+//     text-align: center;
+//     width: 100%;
+// }
