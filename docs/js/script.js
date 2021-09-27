@@ -15,12 +15,12 @@ class HowTime {
 
     sayStatus() {
 
-        if(this.hours > 10 && this.hours < 20) {
+        if(this.hours > 11 && this.hours < 22) {
 
         this.element.innerHTML = this.open;
         this.element.classList.add('open');
 
-        if(this.hours > 19 && this.hours < 20) {
+        if(this.hours > 21 && this.hours < 22) {
             this.element.innerHTML = this.soonClose;
         }
         
@@ -28,7 +28,7 @@ class HowTime {
         this.element.innerHTML = this.close;
         this.element.classList.add('close')
 
-        if(this.hours > 9 && this.hours < 10) {
+        if(this.hours > 10 && this.hours < 11) {
             this.element.innerHTML = this.soonOpen;
         }
     
