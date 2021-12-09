@@ -7,10 +7,10 @@ class HowTime {
         this.date = new Date();
         this.hours = this.date.getHours();
         this.min = this.date.getMinutes();
-        this.open = `Мы сейчас открыты, приходите :)`;
-        this.close = `Мы сейчас закрыты, приходите завтра :)`;
-        this.soonOpen = `Сейчас закрыты, откроемся через ${60 - this.min} минут`;
-        this.soonClose = `Мы открыты, но закроемся через ${60 - this.min} минут`;
+        this.open = `сейчас открыты, приходите :)`;
+        this.close = `сейчас закрыты, приходите завтра :)`;
+        this.soonOpen = `cейчас закрыты, откроемся через ${60 - this.min} минут`;
+        this.soonClose = `открыты, но закроемся через ${60 - this.min} минут`;
     }
 
     sayStatus() {
@@ -23,15 +23,13 @@ class HowTime {
         if(this.hours > 21 && this.hours < 22) {
             this.element.innerHTML = this.soonClose;
         }
-        
             } else {
         this.element.innerHTML = this.close;
         this.element.classList.add('close')
 
         if(this.hours > 10 && this.hours < 11) {
             this.element.innerHTML = this.soonOpen;
-        }
-    
+            }
         }
     }
 }
@@ -105,17 +103,13 @@ class Particle {
     }
 
     draw() {
-        // ctx.fillStyle = '#007AFF';
-        // ctx.fillStyle = '#0007B7';
         ctx.fillStyle = '#0718DE';
-
-
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.closePath();
-        ctx.fill()
-    }
-}
+        ctx.fill();
+    };
+};
 
 function init() {
     particlesArray = [];
@@ -123,7 +117,7 @@ function init() {
         const x = Math.random() * canvas.width;
         const y = Math.random()  * canvas.height;
         particlesArray.push(new Particle(x, y)); 
-    }
+    };
  
 }
 

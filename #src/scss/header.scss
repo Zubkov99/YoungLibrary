@@ -21,10 +21,16 @@ header {
             margin-left: 10vw;
             margin-top: 10px;
 
+            p {
+                @include adaptiv-font(22, 20);
+                @include adaptiv-line(34, 27);
+            }
+
             .open {
                 color: #00FF00;
             }
 
+            
             .close {
                 color: #FF0000;
             }
@@ -34,17 +40,23 @@ header {
             }
 
             h1 {
-                // line-height: calc(40px + 36 *(100vw / 1408));
-                // font-size: calc(40px + 35 *(100vw / 1408));
                 @include adaptiv-line(76, 40);
                 @include adaptiv-font(75, 40);
                 width: 50vw;
             }
 
-            p {
-                @include adaptiv-font(22, 20);
-                @include adaptiv-line(34, 27);
+            .header__description--info {
                 margin-top: 55px;
+                width: 40vw;
+            }
+
+            .header__description--contacts {
+                margin-top: 20px;
+                width: 40vw;
+            }
+
+            .header__description--social{
+                margin-top: 20px;
                 width: 40vw;
             }
 

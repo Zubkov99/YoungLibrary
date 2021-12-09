@@ -40,17 +40,13 @@ class Particle {
     }
 
     draw() {
-        // ctx.fillStyle = '#007AFF';
-        // ctx.fillStyle = '#0007B7';
         ctx.fillStyle = '#0718DE';
-
-
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.closePath();
-        ctx.fill()
-    }
-}
+        ctx.fill();
+    };
+};
 
 function init() {
     particlesArray = [];
@@ -58,7 +54,7 @@ function init() {
         const x = Math.random() * canvas.width;
         const y = Math.random()  * canvas.height;
         particlesArray.push(new Particle(x, y)); 
-    }
+    };
  
 }
 
